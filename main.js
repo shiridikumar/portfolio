@@ -40,13 +40,15 @@ function buttonclick(id) {
     var el = document.getElementById(id);
     el.classList.add("mystyle");
     var x=document.getElementById("navbutton");
-    x.classList.toggle("change");
-    var el = document.getElementById("menulist")
-    el.style.width = "0px";
-    el.style.maxHeight = "0px";
-    el.style.transition = "max-height 1s";
-    el.style.display = "flex";
-    el.style.flexDirection = "column";
+    if(x.classList.value!="container1"){
+        x.classList.toggle("change");
+        var el = document.getElementById("menulist")
+        el.style.width = "0px";
+        el.style.maxHeight = "0px";
+        el.style.transition = "max-height 1s";
+        el.style.display = "flex";
+        el.style.flexDirection = "column";
+    }
 
 
 }
