@@ -40,7 +40,7 @@ function buttonclick(id) {
     var el = document.getElementById(id);
     el.classList.add("mystyle");
     var x = document.getElementById("navbutton");
-    if (x.style.display != "none") {
+    if (x.classList.value=="container1 change") {
         if (x.classList.value != "container1") {
             x.classList.toggle("change");
             var el = document.getElementById("menulist")
@@ -49,7 +49,9 @@ function buttonclick(id) {
             el.style.transition = "max-height 1s";
             el.style.display = "flex";
             el.style.flexDirection = "column";
+            
         }
+        // x.style.display="block";
     }
 }
 
@@ -69,9 +71,12 @@ function page(id) {
         }
     }
     
-        var x = document.getElementById("navbutton");
-    if (x.style.display != "none") {
+    var x = document.getElementById("navbutton");
+    console.log(x,"***************00000000000000000");
+    if (x.classList.value=="container1 change") {
+        console.log(x.style.display,"***************");
         x.classList.toggle("change");
+        // x.style.display="block";
         var el = document.getElementById("menulist")
         el.style.width = "0px";
         el.style.maxHeight = "0px";
