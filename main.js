@@ -39,15 +39,17 @@ function buttonclick(id) {
     el.classList.remove("mystyle");
     var el = document.getElementById(id);
     el.classList.add("mystyle");
-    var x=document.getElementById("navbutton");
-    if(x.classList.value!="container1"){
-        x.classList.toggle("change");
-        var el = document.getElementById("menulist")
-        el.style.width = "0px";
-        el.style.maxHeight = "0px";
-        el.style.transition = "max-height 1s";
-        el.style.display = "flex";
-        el.style.flexDirection = "column";
+    var x = document.getElementById("navbutton");
+    if (x.display != "none") {
+        if (x.classList.value != "container1") {
+            x.classList.toggle("change");
+            var el = document.getElementById("menulist")
+            el.style.width = "0px";
+            el.style.maxHeight = "0px";
+            el.style.transition = "max-height 1s";
+            el.style.display = "flex";
+            el.style.flexDirection = "column";
+        }
     }
 
 
@@ -68,13 +70,15 @@ function page(id) {
             // el.style.transitionDelay="2s";
         }
     }
-    var x=document.getElementById("navbutton");
-    x.classList.toggle("change");
-    var el = document.getElementById("menulist")
-    el.style.width = "0px";
-    el.style.maxHeight = "0px";
-    el.style.transition = "max-height 0.5s";
-    el.style.display = "flex";
-    el.style.flexDirection = "column";
+    if (x.display != "none") {
+        var x = document.getElementById("navbutton");
+        x.classList.toggle("change");
+        var el = document.getElementById("menulist")
+        el.style.width = "0px";
+        el.style.maxHeight = "0px";
+        el.style.transition = "max-height 0.5s";
+        el.style.display = "flex";
+        el.style.flexDirection = "column";
+    }
 }
 
