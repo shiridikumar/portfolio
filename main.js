@@ -40,7 +40,7 @@ function buttonclick(id) {
     var el = document.getElementById(id);
     el.classList.add("mystyle");
     var x = document.getElementById("navbutton");
-    if (x.display != "none") {
+    if (x.style.display != "none") {
         if (x.classList.value != "container1") {
             x.classList.toggle("change");
             var el = document.getElementById("menulist")
@@ -51,8 +51,6 @@ function buttonclick(id) {
             el.style.flexDirection = "column";
         }
     }
-
-
 }
 
 function page(id) {
@@ -70,8 +68,9 @@ function page(id) {
             // el.style.transitionDelay="2s";
         }
     }
-    if (x.display != "none") {
+    
         var x = document.getElementById("navbutton");
+    if (x.style.display != "none") {
         x.classList.toggle("change");
         var el = document.getElementById("menulist")
         el.style.width = "0px";
