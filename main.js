@@ -3,7 +3,7 @@ let pages = ["home", "about", "recognitions", "conferences", "talks", "projects"
 function myFunction(x) {
     x.classList.toggle("change");
     var el = document.getElementById("menulist")
-    console.log(el.style.width,el.style.maxHeight,"**********")
+    console.log(el.style.width, el.style.maxHeight, "**********")
     if (el.style.width == "0px" || !(el.style.width)) {
         el.style.width = "fit-content";
         el.style.maxHeight = "500px";
@@ -11,7 +11,7 @@ function myFunction(x) {
         el.style.display = "flex";
         el.style.flexDirection = "column";
     }
-    else{
+    else {
         el.style.width = "0px";
         el.style.maxHeight = "0px";
         el.style.transition = "max-height 1s";
@@ -39,6 +39,14 @@ function buttonclick(id) {
     el.classList.remove("mystyle");
     var el = document.getElementById(id);
     el.classList.add("mystyle");
+    var x=document.getElementById("navbutton");
+    x.classList.toggle("change");
+    var el = document.getElementById("menulist")
+    el.style.width = "0px";
+    el.style.maxHeight = "0px";
+    el.style.transition = "max-height 1s";
+    el.style.display = "flex";
+    el.style.flexDirection = "column";
 
 
 }
@@ -58,5 +66,13 @@ function page(id) {
             // el.style.transitionDelay="2s";
         }
     }
+    var x=document.getElementById("navbutton");
+    x.classList.toggle("change");
+    var el = document.getElementById("menulist")
+    el.style.width = "0px";
+    el.style.maxHeight = "0px";
+    el.style.transition = "max-height 0.5s";
+    el.style.display = "flex";
+    el.style.flexDirection = "column";
 }
 
