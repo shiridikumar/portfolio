@@ -21,6 +21,19 @@ function myFunction(x) {
     }
 
 }
+ let cat=["pub_topic","pub_cat","pub_date"]
+
+function setlist(index){
+    for(var i=0;i<cat.length;i++){
+        var el=document.getElementById(cat[i]);
+        el.style.display="none";
+    }
+    var newel=document.getElementById(cat[index]);
+    console.log(newel);
+    newel.style.display="block";
+    console.log(newel,"*******");
+
+}
 function buttonclick(id) {
     for (var i = 0; i < pages.length; i++) {
         if (pages[i] != "home" && pages[i] != "about") {
